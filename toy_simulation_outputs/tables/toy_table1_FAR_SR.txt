@@ -1,0 +1,16 @@
+========================================================================
+TOY TABLE 1 — IC Calibration: False-Alarm Rate (FAR) and In-Control
+Signal Rate (SR)
+------------------------------------------------------------------------
+Each depth method evaluated at three reference sizes |Rc| per class.
+Nominal level alpha = 0.05.
+Training and IC test accuracy are 100%, so SR_M is undefined and SR_C =
+SR.
+========================================================================
+
+ Method FAR |Rc|=2000 FAR |Rc|=3000 FAR |Rc|=4000 SR  |Rc|=2000 SR  |Rc|=3000 SR  |Rc|=4000
+     HD         0.049         0.049          0.05         0.050         0.052         0.053
+     MD         0.050         0.050          0.05         0.048         0.054         0.056
+     PD         0.050         0.050          0.05         0.053         0.055         0.057
+     SD         0.050         0.050          0.05         0.053         0.073         0.051
+

@@ -1,0 +1,8 @@
+.Rproj.user/
+.Rhistory
+.RData
+*.rds
+*.keras
+*.rds_model.keras
+*.rds_embed.keras
+latex_tables/*.aux

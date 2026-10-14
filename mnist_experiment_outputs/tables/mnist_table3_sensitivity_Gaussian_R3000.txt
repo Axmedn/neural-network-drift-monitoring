@@ -1,0 +1,16 @@
+========================================================================
+MNIST TABLE 3 — Gaussian Noise Sensitivity at |Rc| = 3000: CDR mean +/-
+SD
+------------------------------------------------------------------------
+CDR mean +/- SD across 10 independent OOC resamples.
+Network, embeddings, and Phase I reference sets held fixed; only OOC
+draw varies.
+Nominal level alpha = 0.05; n_OOC = 500.
+HDr excluded at this reference size due to under-calibration.
+========================================================================
+
+ Method       sigma=0.1       sigma=0.2       sigma=0.3       sigma=0.4
+     MD 0.304 +/- 0.023 0.482 +/- 0.015 0.686 +/- 0.015 0.845 +/- 0.018
+    PD3 0.266 +/- 0.015 0.463 +/- 0.018 0.652 +/- 0.021 0.780 +/- 0.028
+   PDa3 0.298 +/- 0.013 0.474 +/- 0.016 0.642 +/- 0.015 0.768 +/- 0.023
+

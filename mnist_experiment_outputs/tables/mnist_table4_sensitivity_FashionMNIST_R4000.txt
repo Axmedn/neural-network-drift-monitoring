@@ -1,0 +1,17 @@
+========================================================================
+MNIST TABLE 4 — FashionMNIST Sensitivity at |Rc| = 4000: CDR mean, SD,
+95% Bootstrap CI
+------------------------------------------------------------------------
+CDR mean, SD, and 95% bootstrap confidence interval across 10
+independent OOC resamples.
+Network, embeddings, and Phase I reference sets held fixed; only the
+FashionMNIST subset varies.
+Bootstrap CIs computed using 1000 resamples.
+========================================================================
+
+ Method CDR mean    SD 95% CI lo 95% CI hi
+    HDr    0.715 0.020     0.704     0.728
+     MD    0.885 0.013     0.877     0.892
+    PD3    0.859 0.014     0.851     0.867
+   PDa3    0.800 0.015     0.791     0.809
+

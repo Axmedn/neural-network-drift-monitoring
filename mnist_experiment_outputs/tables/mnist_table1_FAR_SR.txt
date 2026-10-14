@@ -1,0 +1,23 @@
+========================================================================
+MNIST TABLE 1 — IC Calibration and Phase II IC Signal Rates
+------------------------------------------------------------------------
+FAR: Phase I false-alarm rate at nominal alpha = 0.05.
+SR: class-weighted IC signal rate on the test set.
+SR_M / SR_C: signal rates among misclassified / correctly classified
+test samples.
+HDr reported only at |Rc| = 4000 (FAR = 0.000 and 0.005 at |Rc| = 2000
+and 3000).
+========================================================================
+
+ Method |Rc|   FAR    SR  SR_M  SR_C
+    HDr 4000 0.038 0.232 0.857 0.218
+     MD 2000 0.050 0.285 0.987 0.268
+     MD 3000 0.050 0.212 0.922 0.196
+     MD 4000 0.050 0.150 0.804 0.135
+    PD3 2000 0.050 0.245 0.957 0.228
+    PD3 3000 0.050 0.178 0.896 0.161
+    PD3 4000 0.050 0.132 0.765 0.117
+   PDa3 2000 0.050 0.242 0.961 0.225
+   PDa3 3000 0.050 0.185 0.935 0.167
+   PDa3 4000 0.050 0.133 0.787 0.118
+

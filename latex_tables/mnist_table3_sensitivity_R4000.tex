@@ -1,0 +1,21 @@
+% MNIST Table 3 — Gaussian sensitivity R=4000
+\begin{table}[htbp]
+\centering
+\caption{MNIST (OOC sensitivity at $|R_c|=4000$): CDR mean
+$\pm$ SD across 10 independent OOC resamples under Gaussian
+pixel noise. HDr is excluded at smaller reference sizes due to
+under-calibration. The network, embeddings, and Phase~I reference
+sets are held fixed; only the OOC draw varies across resamples.}
+\label{tab:mnist-sensitivity}
+\small
+\begin{tabular}{l l l l l}
+\toprule
+Method & {$\sigma=0.1$} & {$\sigma=0.2$} & {$\sigma=0.3$} & {$\sigma=0.4$} \\
+\midrule
+  HDr & $0.387 \pm 0.020$ & $0.553 \pm 0.017$ & $0.677 \pm 0.028$ & $0.779 \pm 0.013$ \\
+  MD & $0.215 \pm 0.016$ & $0.340 \pm 0.009$ & $0.508 \pm 0.016$ & $0.692 \pm 0.014$ \\
+  PD3 & $0.169 \pm 0.016$ & $0.324 \pm 0.010$ & $0.480 \pm 0.019$ & $0.621 \pm 0.020$ \\
+  PDa3 & $0.201 \pm 0.010$ & $0.342 \pm 0.012$ & $0.481 \pm 0.019$ & $0.608 \pm 0.020$ \\
+\bottomrule
+\end{tabular}
+\end{table}

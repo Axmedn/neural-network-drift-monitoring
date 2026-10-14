@@ -1,0 +1,25 @@
+% TOY Table 1 — FAR and SR
+\begin{table}[htbp]
+\centering
+\caption{Toy simulation (IC calibration): false-alarm rate (FAR)
+and in-control signal rate (SR) for each depth method and reference
+size $|R_c|$ (per class). Nominal level $\alpha=0.05$.}
+\label{tab:toy-ic-calibration}
+\small
+\sisetup{round-mode=places,round-precision=3}
+\begin{tabular}{l
+  S[table-format=1.3] S[table-format=1.3] S[table-format=1.3]
+  S[table-format=1.3] S[table-format=1.3] S[table-format=1.3]}
+\toprule
+& \multicolumn{3}{c}{FAR} & \multicolumn{3}{c}{SR} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & {$|R_c|{=}2000$} & {$|R_c|{=}3000$} & {$|R_c|{=}4000$}
+       & {$|R_c|{=}2000$} & {$|R_c|{=}3000$} & {$|R_c|{=}4000$} \\
+\midrule
+  HD & 0.049 & 0.049 & 0.050 & 0.050 & 0.052 & 0.053 \\
+  MD & 0.050 & 0.050 & 0.050 & 0.048 & 0.054 & 0.056 \\
+  PD & 0.050 & 0.050 & 0.050 & 0.053 & 0.055 & 0.057 \\
+  SD & 0.050 & 0.050 & 0.050 & 0.053 & 0.073 & 0.051 \\
+\bottomrule
+\end{tabular}
+\end{table}

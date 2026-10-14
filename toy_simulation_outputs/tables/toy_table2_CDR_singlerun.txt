@@ -1,0 +1,16 @@
+========================================================================
+TOY TABLE 2 — OOC Detection: Concept-Drift Detection Rate (CDR) at |Rc|
+= 4000
+------------------------------------------------------------------------
+CDR at each drift level delta, single OOC draw.
+At delta = 0 the OOC distribution coincides with the class-0 IC
+distribution (sanity check).
+Nominal level alpha = 0.05; n_OOC = 500 per drift level.
+========================================================================
+
+ Method delta=0 delta=0.1 delta=0.2 delta=0.3 delta=0.4 delta=0.5
+     MD   0.038     0.426     0.922     1.000         1         1
+     HD   0.040     0.238     0.834     0.992         1         1
+     PD   0.042     0.482     0.932     1.000         1         1
+     SD   0.060     0.006     0.000     0.000         0         0
+

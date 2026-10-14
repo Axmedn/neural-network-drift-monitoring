@@ -1,0 +1,16 @@
+========================================================================
+MNIST TABLE 2 — Phase II OOC Detection at |Rc| = 4000: Class-Weighted
+CDR
+------------------------------------------------------------------------
+Gaussian noise: sigma in {0.1, 0.2, 0.3, 0.4}.
+FashionMNIST: full dataset shift.
+Single OOC draw per condition.
+Nominal level alpha = 0.05; n_OOC = 500.
+========================================================================
+
+ Method sigma=0.1 sigma=0.2 sigma=0.3 sigma=0.4 FashionMNIST
+     MD     0.206     0.320     0.500     0.698        0.882
+    HDr     0.386     0.562     0.668     0.782        0.732
+    PD3     0.162     0.296     0.456     0.598        0.862
+   PDa3     0.164     0.308     0.468     0.606        0.796
+
