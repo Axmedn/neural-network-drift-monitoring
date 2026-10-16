@@ -6,3 +6,9 @@
 *.rds_model.keras
 *.rds_embed.keras
 latex_tables/*.aux
+
+# Toy-simulation cache is kept so the toy results can be reproduced
+# without retraining (about 0.6 MB). The MNIST cache stays out (about 31 MB).
+!toy_cache_FAST=FALSE_ntr=5000_nic=500_nooc=500_seed=42.rds
+!toy_cache_FAST=FALSE_ntr=5000_nic=500_nooc=500_seed=42.rds_model.keras
+!toy_cache_FAST=FALSE_ntr=5000_nic=500_nooc=500_seed=42.rds_embed.keras

@@ -25,7 +25,7 @@ There are three performance measures:
 
 - **No single depth method wins.** Under the Fashion-MNIST shift, Mahalanobis depth detected 88.5% of drifted images on average across ten resamples (95% bootstrap CI 87.7–89.2%), against 71.5% for halfspace depth. Under Gaussian noise the ranking reversed, with halfspace depth strongest at every noise level. Halfspace depth also had the highest signal rate on clean data, so part of that lead may come from a higher baseline rate of signals.
 - **Calibration has to be checked before comparing methods.** MD, PD3 and PDa3 held FAR at the nominal 0.05 for every reference size. Approximate halfspace depth gave FAR of 0.000 and 0.005 at 2,000 and 3,000 reference points, so it was excluded there. It only reached 0.038 at 4,000.
-- **Calibration on the reference set did not carry over fully to new data.** With MD and 4,000 reference points, 15% of clean test images were flagged, three times α. Much of this comes from the classifier's own mistakes: 80% of misclassified test images were flagged, compared with 14% of correctly classified ones.
+- **Calibration on the reference set did not carry over fully to new data.** With MD and 4,000 reference points, 15% of clean test images were flagged, three times α. Images the classifier got wrong were far more likely to be flagged (80%, against 14% of correctly classified ones), but they are only about 2% of the test set, so most of those signals still come from correctly classified images.
 - **Reference-set size is a trade-off.** Larger reference sets brought the in-control signal rate closer to α but made mild drift harder to detect.
 - **In the toy study**, MD and PD reached full detection by δ = 0.3 and HD by δ = 0.4. Simplicial depth failed to detect the shift and was dropped from the MNIST work.
 
@@ -42,6 +42,7 @@ toy_simulation_outputs/         Toy results: CSV and text tables, figures
 mnist_experiment_outputs/       MNIST results: CSV and text tables
 latex_tables/                   Result tables formatted for LaTeX
 figures/                        Figure used in this README
+toy_cache_….rds, ….keras        Trained toy network and embeddings from the original run
 ```
 
 Full results tables are in `toy_simulation_outputs/tables/` and `mnist_experiment_outputs/tables/`. The written report itself is not included here; it is available on request.
@@ -63,6 +64,11 @@ source("R/generate_latex_tables.R")     # writes LaTeX tables to latex_tables/
 ```
 
 Both experiment scripts cache the trained network and embeddings on the first run, so later runs skip training. Set `FAST_DEV <- TRUE` at the top of either script for a quick, smaller run.
+
+### Reproducing the results
+
+- **Toy simulation:** the cache from the original run is included (`toy_cache_….rds` and its two `.keras` files, about 0.6 MB). `R/toy_example.R` therefore loads the trained network instead of retraining, and should reproduce the toy tables here. It still needs TensorFlow installed, because it uses the saved network to score new resamples. `R/toy_figure_pipeline.R` needs only R.
+- **MNIST:** the cache is not included (about 31 MB, as it holds the MNIST images), so `R/mnist_fashion_monitoring.R` downloads the data and retrains the network on its first run. Random seeds are fixed. Even so, neural-network training can differ slightly between machines and TensorFlow versions, so rerun MNIST results may differ slightly from the tables here. The conclusions should not change.
 
 ## Reference
 
